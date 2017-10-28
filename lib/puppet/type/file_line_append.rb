@@ -1,4 +1,4 @@
-Puppet::Type.newtype(:service_env_var) do
+Puppet::Type.newtype(:file_line_append) do
     
       ensurable
           
