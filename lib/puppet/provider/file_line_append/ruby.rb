@@ -42,9 +42,9 @@ def add_string(line)
     else
      if line.include? "\n"
         line = line.gsub(/\n/,"")
-        $string << "\n"    
+        resource[:string] << "\n"    
      end  
-     line << $string
+     line << resource[:string]
     end
     return line
 end   
