@@ -4,3 +4,7 @@ lib/puppet/\.DS_Store
 lib/\.DS_Store
 
 \.DS_Store
+
+\.idea/
+
+file_line_append\.iml
