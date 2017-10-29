@@ -1,4 +1,27 @@
 Puppet::Type.newtype(:file_line_append) do
+    
+  desc <<-EOT
+    Ensures that a given string is contained within a line in a file.  If
+    the string is not contained in the given line, Puppet will append the string to
+    the end of the line to ensure the desired state. 
+    Example:
+       file_line_append { 'sudo_rule':
+          path => '/etc/sudoers',
+          line => '%sudo ALL=(ALL)',
+          string => ' /usr/bin/myscript2'
+        }
+
+     Match example:
+  
+        file_line_append { 'sudo_rule':
+          path => '/etc/sudoers',
+          line => '%sudo ALL=(ALL)',
+          string => '/usr/bin/myscript',
+          match => '/usr/bin/notworkingscript'
+        }
+
+     In this code example math will look for a line beginning with export and then look for a match string a replace it with the string value.    
+  EOT    
 
   ensurable do
     defaultvalues
