@@ -20,7 +20,7 @@ Puppet::Type.newtype(:file_line_append) do
           match => '/usr/bin/notworkingscript'
         }
 
-     In this code example math will look for a line beginning with export and then look for a match string a replace it with the string value.    
+     In this code example math will look for a line beginning with %sudo and then look for a match string a replace it with the string value.    
   EOT    
 
   ensurable do
